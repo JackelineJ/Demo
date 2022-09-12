@@ -370,7 +370,6 @@ h2 {
     left: 0;
     bottom: 0;
     background: linear-gradient(135deg, #f7dae7, #751440);
-    /***en background no se si va un image al lado***/
 }
 
 .container form .user__info {
@@ -411,19 +410,6 @@ form .user__info .input {
 
 .receive__news {
     font-weight: 600;
-}
-
-.box__go__to {
-    max-width: 90px;
-    text-align: center;
-    margin: auto;
-    padding: 16px;
-    background: #751440;
-    border: 1px solid #751440;
-    border-radius: 16px;
-    box-sizing: border-box;
-    color: #f7dae7;
-    text-decoration: none;
 }
 
 input[type="submit"],
