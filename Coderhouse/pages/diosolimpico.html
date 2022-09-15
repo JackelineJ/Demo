@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css" type="text/css">
     <title>Dioses Olímpicos</title>
 </head>
@@ -18,14 +20,32 @@
         <a href="../index.html">
             <img class="header__logo" src="../assets/logo.png" alt="Logo de la pagina">
         </a>
-        <nav>
-            <ul class="header__menu">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../pages/diosolimpico.html">Dioses Olímpicos</a></li>
-                <li><a href="../pages/galeria.html">Galería</a></li>
-                <li><a href="../pages/epopeya.html">Epopeyas y poemas</a></li>
-                <li><a href="../pages/contacto.html">Contacto</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/diosolimpico.html">Dioses Olímpicos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/galeria.html">Galería</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/epopeya.html">Epopeyas y poemas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -34,57 +54,320 @@
             <h1 class="main__title">Los Dioses Olímpicos y sus orígenes</h1>
         </div>
         <div class="gods__grid">
+
+            <!----------------Seccion de Zeus---------------------->
+
             <div class="column__gods">
                 <h2>ZEUS</h2>
-                <img class="god__profile" src="../assets/perfildios/ze.png" alt="Símbolo de Zeus">
+                <img class="god__profile" src="../assets/perfildios/ze.png" alt="Símbolo de Zeus" data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop">
             </div>
+
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Zeus</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="god__profile" src="../assets/perfildios/ze.png" alt="Símbolo de Zeus">
+                            <p>Características de Zeus</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---------Seccion de Poseidon--------->
             <div class="column__gods">
                 <h2>POSEIDON</h2>
-                <img class="god__profile" src="../assets/perfildios/po.png" alt="Símbolo de Poseidón">
+                <img class="god__profile" src="../assets/perfildios/po.png" alt="Símbolo de Poseidón"
+                    data-bs-toggle="modal" data-bs-target="#staticBackdropTwo">
             </div>
+
+            <div class="modal fade" id="staticBackdropTwo" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Poseidón</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="god__profile" src="../assets/perfildios/po.png" alt="Símbolo de Poseidón">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---------------------Seccion de Hera------------------------------>
             <div class="column__gods">
                 <h2>HERA</h2>
-                <img class="god__profile" src="../assets/perfildios/he.png" alt="Símbolo de Hera">
+                <img class="god__profile" src="../assets/perfildios/he.png" alt="Símbolo de Hera" data-bs-toggle="modal"
+                    data-bs-target="#staticBackdropThree">
             </div>
+
+            <div class="modal fade" id="staticBackdropThree" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Hera</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="god__profile" src="../assets/perfildios/he.png" alt="Símbolo de Hera">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---------------------Seccion de Dionisio------------------------------>
             <div class="column__gods">
                 <h2>DIONISIO</h2>
-                <img class="god__profile" src="../assets/perfildios/di.png" alt="Símbolo de Dionisio">
+                <img class="god__profile" src="../assets/perfildios/di.png" alt="Símbolo de Dionisio"
+                    data-bs-toggle="modal" data-bs-target="#staticBackdropFour">
             </div>
+
+            <div class="modal fade" id="staticBackdropFour" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Dionisio</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="god__profile" src="../assets/perfildios/di.png" alt="Símbolo de Dionisio">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---------------------Seccion de Demeter------------------------------>
             <div class="column__gods">
                 <h2>DEMETER</h2>
-                <img class="god__profile" src="../assets/perfildios/de.png" alt="Símbolo de Demeter">
+                <img class="god__profile" src="../assets/perfildios/de.png" alt="Símbolo de Demeter"
+                    data-bs-toggle="modal" data-bs-target="#staticBackdropFive">
             </div>
+
+            <div class="modal fade" id="staticBackdropFive" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Deméter</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="god__profile" src="../assets/perfildios/de.png" alt="Símbolo de Demeter">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---------------------Seccion de Atenea------------------------------>
             <div class="column__gods">
                 <h2>ATENEA</h2>
-                <img class="god__profile" src="../assets/perfildios/at.png" alt="Símbolo de Atenea">
+                <img class="god__profile" src="../assets/perfildios/at.png" alt="Símbolo de Atenea"
+                    data-bs-toggle="modal" data-bs-target="#staticBackdropSix">
             </div>
+
+            <div class="modal fade" id="staticBackdropSix" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Atenea</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="god__profile" src="../assets/perfildios/at.png" alt="Símbolo de Atenea">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---------------------Seccion de Apolo------------------------------>
             <div class="column__gods">
                 <h2>APOLO</h2>
-                <img class="god__profile" src="../assets/perfildios/apo.png" alt="Símbolo de Apolo">
+                <img class="god__profile" src="../assets/perfildios/apo.png" alt="Símbolo de Apolo"
+                    data-bs-toggle="modal" data-bs-target="#staticBackdropSeven">
             </div>
+
+            <div class="modal fade" id="staticBackdropSeven" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Apolo</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="god__profile" src="../assets/perfildios/apo.png" alt="Símbolo de Apolo">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---------------------Seccion de Artemisa------------------------------>
             <div class="column__gods">
                 <h2>ARTEMISA</h2>
-                <img class="god__profile" src="../assets/perfildios/art.png" alt="Símbolo de Artemisa">
+                <img class="god__profile" src="../assets/perfildios/art.png" alt="Símbolo de Artemisa"
+                    data-bs-toggle="modal" data-bs-target="#staticBackdropEight">
             </div>
+
+            <div class="modal fade" id="staticBackdropEight" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Artemisa</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="god__profile" src="../assets/perfildios/art.png" alt="Símbolo de Artemisa">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---------------------Seccion de Ares------------------------------>
             <div class="column__gods">
                 <h2>ARES</h2>
-                <img class="god__profile" src="../assets/perfildios/are.png" alt="Símbolo de Ares">
+                <img class="god__profile" src="../assets/perfildios/are.png" alt="Símbolo de Ares"
+                    data-bs-toggle="modal" data-bs-target="#staticBackdropNine">
             </div>
+
+            <div class="modal fade" id="staticBackdropNine" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Ares</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="god__profile" src="../assets/perfildios/are.png" alt="Símbolo de Ares">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---------------------Seccion de Hefesto------------------------------>
             <div class="column__gods">
                 <h2>HEFESTO</h2>
-                <img class="god__profile" src="../assets/perfildios/hef.png" alt="Símbolo de Hefesto">
+                <img class="god__profile" src="../assets/perfildios/hef.png" alt="Símbolo de Hefesto"
+                    data-bs-toggle="modal" data-bs-target="#staticBackdropTen">
             </div>
+
+            <div class="modal fade" id="staticBackdropTen" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Hefesto</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="god__profile" src="../assets/perfildios/hef.png" alt="Símbolo de Hefesto">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---------------------Seccion de Afrodita------------------------------>
             <div class="column__gods">
                 <h2>AFRODITA</h2>
-                <img class="god__profile" src="../assets/perfildios/af.png" alt="Símbolo de Afrodita">
+                <img class="god__profile" src="../assets/perfildios/af.png" alt="Símbolo de Afrodita"
+                    data-bs-toggle="modal" data-bs-target="#staticBackdropEleven">
             </div>
+
+            <div class="modal fade" id="staticBackdropEleven" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Afrodita</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="god__profile" src="../assets/perfildios/af.png" alt="Símbolo de Afrodita">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---------------------Seccion de Hermes------------------------------>
             <div class="column__gods">
                 <h2>HERMES</h2>
-                <img class="god__profile" src="../assets/perfildios/her.png" alt="Símbolo de Hermes">
+                <img class="god__profile" src="../assets/perfildios/her.png" alt="Símbolo de Hermes"
+                    data-bs-toggle="modal" data-bs-target="#staticBackdropTwelve">
             </div>
+
+            <div class="modal fade" id="staticBackdropTwelve" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Hermes</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="god__profile" src="../assets/perfildios/her.png" alt="Símbolo de Hermes">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---------------------Seccion de Hestia------------------------------>
             <div class="column__gods">
                 <h2>HESTIA</h2>
-                <img class="god__profile" src="../assets/perfildios/hes.png" alt="Símbolo de Hestia">
+                <img class="god__profile" src="../assets/perfildios/hes.png" alt="Símbolo de Hestia"
+                    data-bs-toggle="modal" data-bs-target="#staticBackdropThirteen">
+            </div>
+
+            <div class="modal fade" id="staticBackdropThirteen" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Hestia</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="god__profile" src="../assets/perfildios/hes.png" alt="Símbolo de Hestia">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -98,7 +381,9 @@
             </a>
         </div>
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
