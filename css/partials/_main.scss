@@ -1,10 +1,15 @@
-.main {
+
+.main, main{
     font-family: $crimson-text;
     max-width: 1200px;
     margin: 0 auto;
     margin-top: 1rem;
     margin-bottom: 1rem;
 
+    img {
+        width: 100%;
+    }
+    /*******Index*********/
     .main__quote::before {
         content: "\201C";
         left: -2.5rem;
@@ -14,23 +19,22 @@
     }
 
     .main__quote {
-    max-width: 700px;
-    margin: auto;
-    padding: 1.625rem;
-    background: $backgroundQuote;
-    border: 1px solid $backgroundColor;
-    color: $backgroundColor;
-    box-sizing: border-box;
-    border-radius: 1rem;
-    margin-top: 2.5rem;
-    
-    .main__quote__text {
-        font-style: italic;
-        text-align: justify;
-        font-size: 1.5rem;
-        line-height: 1.5;
-        margin: 0;
-    }
+        max-width: 700px;
+        margin: auto;
+        padding: 1.625rem;
+        background: $backgroundQuote;
+        border: 1px solid $backgroundColor;
+        color: $backgroundColor;
+        box-sizing: border-box;
+        border-radius: 1rem;
+        margin-top: 2.5rem;
+        .main__quote__text {
+            font-style: italic;
+            text-align: justify;
+            font-size: 1.5rem;
+            line-height: 1.5;
+            margin: 0;
+        }
     }
     .main__quote__border {
         border-left-width: 1.25rem;
@@ -66,4 +70,55 @@
             color: $primary;
         }
     }
+    /********Dioses olimpicos********/
+    .gods__grid {
+        max-width: 1200px;
+        display: flex;
+        flex-direction: row;
+        flex-flow: wrap;
+        justify-content: space-around;
+        .god__profile {
+            border-radius: 1rem;
+            margin-bottom: 1.25rem;
+            cursor: pointer;
+        }
+        .god__card {
+            border-radius: 1rem;
+        }
+        .head__title {
+            font-weight: 700;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+        }
+        .close__button {
+            background-color: $changeColor;
+            border: 1px solid $changeColor;
+            color: black;
+            font-weight: 600;
+        }
+    }
+    /***********Epopeyas y poemas***********/
+    .row {
+        max-width: 1200px;
+        .column {
+            display: flex;
+            flex-wrap: wrap;
+            flex: 1;
+            flex-direction: row;
+            justify-content: center;
+            margin: 0.5rem;
+            .cover {
+                width: 212px;
+                height: 300px;
+                border-radius: 1rem;
+                margin-bottom: 2em;
+            }
+        }
+    }
 }
+
+
+
+
+
+
