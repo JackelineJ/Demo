@@ -1,3 +1,9 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
 @import "./partials/colors";
 @import "./partials/fonts";
 @import "./partials/header";
