@@ -1,6 +1,14 @@
 @charset "UTF-8";
 @import "https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&display=swap";
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
 .header {
   text-align: center;
   background-color: #751440;
@@ -55,6 +63,7 @@
   font-size: 4rem;
   font-weight: 900;
   text-align: center;
+  color: black;
 }
 
 .main__title__two {
@@ -62,10 +71,12 @@
   font-weight: 800;
   text-align: center;
   margin: 2rem 0 2rem 0;
+  color: black;
 }
 
 h2 {
   text-align: center;
+  color: black;
 }
 
 /*Text*/
@@ -76,6 +87,7 @@ p {
   text-indent: 1.8rem;
   text-align: justify;
   padding: 0 2rem 0 2rem;
+  color: black;
 }
 
 .main,
@@ -122,8 +134,10 @@ main .main__quote .main__quote__text {
   font-style: italic;
   text-align: justify;
   font-size: 1.5rem;
+  font-weight: 600;
   line-height: 1.5;
   margin: 0;
+  color: #751440;
 }
 
 .main .main__quote__border,
@@ -163,6 +177,7 @@ main .box .box__go__to {
   border-radius: 1rem;
   box-sizing: border-box;
   color: white;
+  font-weight: 600;
 }
 
 .main .gods__grid,
@@ -325,7 +340,11 @@ main .row .column .cover {
   box-shadow: inset 400px 0 0 0 #ffff00;
 }
 
-.container {
+.main__contacts {
+  display: flex;
+}
+
+.main__contacts .container {
   max-width: 650px;
   width: 100%;
   padding: 2.8rem 3.15rem;
@@ -335,13 +354,13 @@ main .row .column .cover {
   color: black;
 }
 
-.container .title__form {
+.main__contacts .container .title__form {
   font-size: 2rem;
   font-weight: 500;
   position: relative;
 }
 
-.container .title__form::before {
+.main__contacts .container .title__form::before {
   content: "";
   position: absolute;
   height: 5px;
@@ -351,7 +370,7 @@ main .row .column .cover {
   background: linear-gradient(135deg, #f7dae7, #751440);
 }
 
-form .user__info {
+.main__contacts form .user__info {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -359,7 +378,7 @@ form .user__info {
   margin: 1.25rem 0 0.75rem 0;
 }
 
-form .user__info .data {
+.main__contacts form .user__info .data {
   font-size: 1.2rem;
   font-weight: 400;
   display: block;
@@ -367,8 +386,8 @@ form .user__info .data {
   margin-bottom: 0.625rem;
 }
 
-form .user__info input[type=submit],
-form .user__info input[type=reset] {
+.main__contacts form .user__info input[type=submit],
+.main__contacts form .user__info input[type=reset] {
   display: inline-block;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -382,16 +401,16 @@ form .user__info input[type=reset] {
   cursor: pointer;
 }
 
-form .user__info .receive__news {
+.main__contacts form .user__info .receive__news {
   font-weight: 600;
 }
 
-form .input {
+.main__contacts form .input {
   width: 100%;
   margin-bottom: 1.25rem;
 }
 
-form input {
+.main__contacts form input {
   height: 40px;
   width: 100%;
   outline: none;
@@ -403,22 +422,22 @@ form input {
   transition: all 0.3s ease;
 }
 
-form input input[type=reset] {
+.main__contacts form input input[type=reset] {
   margin-left: 0.625rem;
 }
 
-form .user__info .input input:focus,
-form .user__info .input input:valid {
+.main__contacts form .user__info .input input:focus,
+.main__contacts form .user__info .input input:valid {
   border-color: #751440;
 }
 
-form .receive__news {
+.main__contacts form .receive__news {
   font-weight: 600;
   font-size: 1rem;
   margin: 0.1rem 0 1rem 0;
 }
 
-form .receive__news .check {
+.main__contacts form .receive__news .check {
   width: 1rem;
   height: 1rem;
   text-align: center;
@@ -445,6 +464,54 @@ footer .footer__logo {
   margin-bottom: 1.25rem;
 }
 
+@media screen and (max-width: 880px) {
+  .main__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main__container .main__title {
+    font-size: 2.5rem;
+  }
+
+  .main__contacts {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .main__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main__container .main__title {
+    font-size: 2.5rem;
+  }
+
+  .main__contacts {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .main__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main__container .main__title {
+    font-size: 2.5rem;
+  }
+
+  .main__contacts {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .main__container {
     display: flex;
@@ -453,6 +520,11 @@ footer .footer__logo {
 
   .main__container .main__title {
     font-size: 2.5rem;
+  }
+
+  .main__contacts {
+    display: flex;
+    flex-direction: column;
   }
 }
 
