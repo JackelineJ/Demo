@@ -1,94 +1,96 @@
-.container {
-    max-width: 650px;
-    width: 100%;
-    padding: 2.8rem 3.15rem;
-    border-radius: 0.5rem;
-    position: relative;
-    font-family: $crimson-text;
-    color: black;
-    .title__form{
-        font-size: 2rem;
-        font-weight: 500;
+.main__contacts {
+    display: flex;
+    .container {
+        max-width: 650px;
+        width: 100%;
+        padding: 2.8rem 3.15rem;
+        border-radius: 0.5rem;
         position: relative;
-    }
-}
-
-.container .title__form::before {
-    content: '';
-    position: absolute;
-    height: 5px;
-    width: 200px;
-    left: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, #f7dae7, #751440);
-}
-
-form {
-    .user__info {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: space-around;
-        margin: 1.25rem 0 0.75rem 0;
-        .data {
-            font-size: 1.2rem;
-            font-weight: 400;
-            display: block;
-            font-weight: 600;
-            margin-bottom: 0.625rem;
+        font-family: $crimson-text;
+        color: black;
+        .title__form{
+            font-size: 2rem;
+            font-weight: 500;
+            position: relative;
         }
-        input[type="submit"],
-        input[type="reset"] {
-            display: inline-block;
+    }
+    
+    .container .title__form::before {
+        content: '';
+        position: absolute;
+        height: 5px;
+        width: 200px;
+        left: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, #f7dae7, #751440);
+    }
+    
+    form {
+        .user__info {
+            display: flex;
             flex-wrap: wrap;
+            flex-direction: column;
             justify-content: space-around;
-            padding: 0.3rem 0.125rem;
-            width: 70px;
-            background: $backgroundColor;
-            border: 1px solid $backgroundColor;
-            border-radius: 10px;
-            color: $primary;
-            margin: 0.2rem;
-            cursor: pointer;
+            margin: 1.25rem 0 0.75rem 0;
+            .data {
+                font-size: 1.2rem;
+                font-weight: 400;
+                display: block;
+                font-weight: 600;
+                margin-bottom: 0.625rem;
+            }
+            input[type="submit"],
+            input[type="reset"] {
+                display: inline-block;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                padding: 0.3rem 0.125rem;
+                width: 70px;
+                background: $backgroundColor;
+                border: 1px solid $backgroundColor;
+                border-radius: 10px;
+                color: $primary;
+                margin: 0.2rem;
+                cursor: pointer;
+            }
+            .receive__news {
+                font-weight: 600;
+            }
+        }
+        .input {
+            width: 100%;
+            margin-bottom: 1.25rem;
+        }
+        input {
+            height: 40px;
+            width: 100%;
+            outline: none;
+            border-radius: 0.3rem;
+            border: 1px solid $colorForm;
+            font-size: 1rem;
+            border-bottom-width: 0.125rem;
+            padding-left: 0.625rem;
+            transition: all 0.3s ease;
+            input[type="reset"] {
+                margin-left: 0.625rem;
+            }
+        }
+        .user__info .input input:focus,
+        .user__info .input input:valid {
+            border-color: $backgroundColor;
         }
         .receive__news {
             font-weight: 600;
-        }
-    }
-    .input {
-        width: 100%;
-        margin-bottom: 1.25rem;
-    }
-    input {
-        height: 40px;
-        width: 100%;
-        outline: none;
-        border-radius: 0.3rem;
-        border: 1px solid $colorForm;
-        font-size: 1rem;
-        border-bottom-width: 0.125rem;
-        padding-left: 0.625rem;
-        transition: all 0.3s ease;
-        input[type="reset"] {
-            margin-left: 0.625rem;
-        }
-    }
-    .user__info .input input:focus,
-    .user__info .input input:valid {
-        border-color: $backgroundColor;
-    }
-    .receive__news {
-        font-weight: 600;
-        font-size: 1rem;
-        margin: 0.1rem 0 1rem 0;
-        .check{
-            width:1rem;
-            height: 1rem;
-            text-align: center;
+            font-size: 1rem;
+            margin: 0.1rem 0 1rem 0;
+            .check{
+                width:1rem;
+                height: 1rem;
+                text-align: center;
+            }
         }
     }
 }
-
 
 
 
