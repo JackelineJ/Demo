@@ -3,15 +3,19 @@
     .main__container {
         display: flex;
         flex-direction: column;
-
-        .main__title {
-            font-size: 2.5rem;
-        }
     }
 
+    .main__title {
+        font-size: 2.5rem;
+    }
+    
     .main__contacts {
         display: flex;
         flex-direction: row;
+    }
+
+    .page__title {
+        font-size: 2.5rem;
     }
 }
 
