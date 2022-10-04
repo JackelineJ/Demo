@@ -13,10 +13,7 @@
             grid-template-rows: repeat(3, 1fr);
             gap: 1rem;
             margin: 2rem;
-        .gallery__img {
-                object-fit: cover;
-        }
-        .gallery__img img {
+            img {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -66,29 +63,20 @@
         }
         }
         .museums {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            @extend %flexColumn;
             .buttons {
-                margin: 1rem 0 1rem 0;
-                width: 30%;
-                text-align: center;
+                @extend %buttonDefault;
             }
         }
         .museums .buttons {
+            @extend %buttonDefault;
             text-decoration: none;
-            color: $primary;
-            font-size: 1.5rem;
-            font-weight: 600;
-            background-color: $backgroundColor;
-            border-radius: 1rem;
-            box-shadow: inset 0 0 0 0 $backgroundColor;
-            padding: 1.5rem;
+            background-color: map-get($colors, backgroundColor);
+            box-shadow: inset 0 0 0 0 map-get($colors, backgroundColor);
             transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
             &:hover {
                 color: black;
-                box-shadow: inset 400px 0 0 0 $changeColor;
+                box-shadow: inset 400px 0 0 0 map-get($colors, changeColor);
             }
         }
     }
