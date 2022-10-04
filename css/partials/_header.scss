@@ -1,6 +1,6 @@
 .header {
     text-align: center;
-    background-color: $backgroundColor;
+    background-color: map-get($colors, backgroundColor);
     font-family: $crimson-text;
     .header__logo {
         width: 150px;
