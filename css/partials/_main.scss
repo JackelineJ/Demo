@@ -22,9 +22,9 @@
         max-width: 700px;
         margin: auto;
         padding: 1.625rem;
-        background: $backgroundQuote;
-        border: 1px solid $backgroundColor;
-        color: $backgroundColor;
+        background: map-get($colors, backgroundQuote);
+        border: 1px solid map-get($colors, backgroundColor);
+        color: map-get($colors, backgroundColor);
         box-sizing: border-box;
         border-radius: 1rem;
         margin-top: 2.5rem;
@@ -35,7 +35,7 @@
             font-weight: 600;
             line-height: 1.5;
             margin: 0;
-            color:$backgroundColor;
+            color:map-get($colors, backgroundColor);
         }
     }
     .main__quote__border {
@@ -48,9 +48,8 @@
     }
 
     .box {
-        max-width: 650px;
-        display: flex;
-        flex-wrap: wrap;
+        @extend %flexRow;
+        max-width: 1200px;
         justify-content: flex-end;
         max-width: 100%;
         background-image: url(../assets/images/gods.jpg);
@@ -60,25 +59,19 @@
         background-size: cover;
 
         .box__go__to {
+            @include boxButton($boxBackground: #751440, $boxBorder: 3px solid #ffff00, $boxLetter: #ffff);
             text-decoration: none;
             max-width: 90px;
             text-align: center;
             margin: auto;
-            padding: 1rem;
-            background: $backgroundColor;
-            border: 1px solid $backgroundColor;
-            border-radius: 1rem;
             box-sizing: border-box;
-            color: $primary;
             font-weight: 600;
         }
     }
     /********Dioses olimpicos********/
     .gods__grid {
+        @extend %flexRow;
         max-width: 1200px;
-        display: flex;
-        flex-direction: row;
-        flex-flow: wrap;
         justify-content: space-around;
         .god__profile {
             border-radius: 1rem;
@@ -94,8 +87,8 @@
             text-transform: uppercase;
         }
         .close__button {
-            background-color: $changeColor;
-            border: 1px solid $changeColor;
+            background-color: map-get($colors, changeColor);
+            border: 1px solid map-get($colors, changeColor);
             color: black;
             font-weight: 600;
         }
@@ -104,10 +97,9 @@
     .row {
         max-width: 1200px;
         .column {
-            display: flex;
-            flex-wrap: wrap;
+            @extend %flexColumn;
+            flex-direction: column;
             flex: 1;
-            flex-direction: row;
             justify-content: center;
             margin: 0.5rem;
             .cover {
