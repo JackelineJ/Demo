@@ -1,16 +1,13 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-}
+@import "./partials/maps";
+@import "./partials/mixins";
+@import "./partials/extends";
 @import "./partials/colors";
 @import "./partials/fonts";
 @import "./partials/header";
 @import "./partials/navbar";
 @import "./partials/text";
 @import "./partials/main";
-@import"./partials/gallery";
+@import "./partials/gallery";
 @import "./partials/form";
 @import "./partials/footer";
 @import "./partials/mediaq";
