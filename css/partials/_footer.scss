@@ -2,7 +2,7 @@ footer {
     font-family: $crimson-text;
     text-align: center;
     color: $primary;
-    background-color: $backgroundColor;
+    background-color: map-get($colors, backgroundColor);
     h3 {
         font-size: 1.5rem;
         padding: 1rem 0 0 0;
