@@ -58,14 +58,19 @@
     .main__container {
         display: flex;
         flex-direction: column;
+        flex-wrap: wrap;
 
         .main__title {
             font-size: 2.5rem;
         }
-    }
+        .row {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 1fr);
+        }
 
-    .main__contacts {
+        .main__contacts {
         display: flex;
         flex-direction: column;
+        }
     }
 }
