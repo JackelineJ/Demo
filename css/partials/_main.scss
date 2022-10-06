@@ -1,71 +1,83 @@
 
 .main, main{
     font-family: $crimson-text;
+    box-sizing: border-box;
+    margin:auto;
+    padding: 0;
     max-width: 1200px;
-    margin: 0 auto;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-
-    img {
-        width: 100%;
-    }
     /*******Index*********/
-    .main__quote::before {
-        content: "\201C";
-        left: -2.5rem;
-        margin-top: -1.25rem;
-        font-size: 4rem;
-        display: block;
-    }
-
-    .main__quote {
-        max-width: 700px;
-        margin: auto;
-        padding: 1.625rem;
-        background: map-get($colors, backgroundQuote);
-        border: 1px solid map-get($colors, backgroundColor);
-        color: map-get($colors, backgroundColor);
-        box-sizing: border-box;
-        border-radius: 1rem;
-        margin-top: 2.5rem;
-        .main__quote__text {
-            font-style: italic;
-            text-align: justify;
-            font-size: 1.5rem;
-            font-weight: 600;
-            line-height: 1.5;
-            margin: 0;
-            color:map-get($colors, backgroundColor);
+    .index__grid {
+        display: grid;
+        background-color: map-get($colors, primary);
+        grid-template-areas:
+            "box1 box1"
+            "box2 box3"
+            "box4 box5";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 1rem;
+        .box1 {
+            grid-area: box1;
         }
-    }
-    .main__quote__border {
-        border-left-width: 1.25rem;
-    }
-
-    .introduction {
-        max-width: 1200px;
-        margin: auto;
-    }
-
-    .box {
-        @extend %flexRow;
-        max-width: 1200px;
-        justify-content: flex-end;
-        max-width: 100%;
-        background-image: url(../assets/images/gods.jpg);
-        padding: 300px 200px;
-        margin: 3rem 100px 3rem 100px;
-        border-radius: 1rem;
-        background-size: cover;
-
-        .box__go__to {
-            @include boxButton($boxBackground: #751440, $boxBorder: 3px solid #ffff00, $boxLetter: #ffff);
-            text-decoration: none;
-            max-width: 90px;
-            text-align: center;
-            margin: auto;
-            box-sizing: border-box;
-            font-weight: 600;
+        .box2 {
+            grid-area: box2;
+            align-items: center;
+            margin-top: 20rem;
+            .main__quote::before {
+                content: "\201C";
+                left: -2.5rem;
+                margin-top: -1.25rem;
+                font-size: 4rem;
+                display: block;
+            }
+            .main__quote {
+                max-width: 700px;
+                padding: 1.625rem;
+                background: map-get($colors, backgroundQuote);
+                border: 1px solid map-get($colors, backgroundColor);
+                color: map-get($colors, backgroundColor);
+                box-sizing: border-box;
+                border-radius: 1rem;
+                margin-top: 2.5rem;
+                .main__quote__text {
+                    font-style: italic;
+                    text-align: justify;
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    line-height: 1.5;
+                    margin: 0;
+                    color:map-get($colors, backgroundColor);
+                }
+            }
+            .main__quote__border {
+                border-left-width: 1.25rem;
+            }
+        }
+        .box3 {
+            grid-area: box3;
+        }
+        .box4 {
+            grid-area: box4;
+            
+            .box{
+                display: flex;
+                justify-content: center;
+                .box__go__to {
+                    @include boxButton($boxBackground: #751440, $boxBorder: 3px solid #ffff00, $boxLetter: #ffff);
+                    text-decoration: none;
+                    max-width: 90px;
+                    font-weight: 600;
+                    margin-top: 3rem;
+                }
+            }
+        }
+        .box5 {
+            grid-area: box5;
+            
+            .index__img{
+                border-radius: 1rem;
+                margin-bottom: 2rem;
+            }
         }
     }
     /********Dioses olimpicos********/
@@ -96,18 +108,29 @@
     /***********Epopeyas y poemas***********/
     .row {
         max-width: 1200px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        gap: 1rem;
         .column {
-            @extend %flexColumn;
-            flex-direction: column;
-            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
             justify-content: center;
-            margin: 0.5rem;
             .cover {
                 width: 212px;
                 height: 300px;
                 border-radius: 1rem;
                 margin-bottom: 2em;
             }
+        }
+        .column1{
+            grid-column: 1 / 2;
+        }
+        .column2{
+            grid-column: 2 / 3;
+        }
+        .column3{
+            grid-column: 3 / 4;
         }
     }
 }
