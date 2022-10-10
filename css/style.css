@@ -1,11 +1,13 @@
 @charset "UTF-8";
 @import "https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&display=swap";
-html,
-body {
+* {
   margin: 0;
   padding: 0;
-  height: 100%;
-  width: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
 }
 
 ul {
@@ -33,17 +35,20 @@ img {
   padding: 1.5rem;
 }
 
-.main__container .gal .museums {
+.main__container .gal .museums, .main {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.main .gods__grid, main .gods__grid {
+.main .gods__grid {
   display: flex;
   flex-direction: row;
   flex-flow: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .header {
@@ -111,6 +116,7 @@ img {
 h2 {
   text-align: center;
   color: black;
+  font-weight: 600;
 }
 
 /*Text*/
@@ -124,40 +130,23 @@ p {
   color: black;
 }
 
-.main, main {
+.main {
   font-family: "Crimson Text", serif;
-  box-sizing: border-box;
-  margin: auto;
-  padding: 0;
-  max-width: 1200px;
   /*******Index*********/
   /********Dioses olimpicos********/
   /***********Epopeyas y poemas***********/
 }
-.main .index__grid, main .index__grid {
-  display: grid;
-  background-color: white;
-  grid-template-areas: "box1 box1" "box2 box3" "box4 box5";
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 1rem;
-}
-.main .index__grid .box1, main .index__grid .box1 {
-  grid-area: box1;
-}
-.main .index__grid .box2, main .index__grid .box2 {
-  grid-area: box2;
+.main .box2 {
   align-items: center;
-  margin-top: 20rem;
 }
-.main .index__grid .box2 .main__quote::before, main .index__grid .box2 .main__quote::before {
+.main .box2 .main__quote::before {
   content: "“";
   left: -2.5rem;
   margin-top: -1.25rem;
   font-size: 4rem;
   display: block;
 }
-.main .index__grid .box2 .main__quote, main .index__grid .box2 .main__quote {
+.main .box2 .main__quote {
   max-width: 700px;
   padding: 1.625rem;
   background: #ebafca;
@@ -167,7 +156,7 @@ p {
   border-radius: 1rem;
   margin-top: 2.5rem;
 }
-.main .index__grid .box2 .main__quote .main__quote__text, main .index__grid .box2 .main__quote .main__quote__text {
+.main .box2 .main__quote .main__quote__text {
   font-style: italic;
   text-align: justify;
   font-size: 1.5rem;
@@ -176,91 +165,76 @@ p {
   margin: 0;
   color: #751440;
 }
-.main .index__grid .box2 .main__quote__border, main .index__grid .box2 .main__quote__border {
+.main .box2 .main__quote__border {
   border-left-width: 1.25rem;
 }
-.main .index__grid .box3, main .index__grid .box3 {
-  grid-area: box3;
+.main .box3 {
+  align-items: center;
 }
-.main .index__grid .box4, main .index__grid .box4 {
-  grid-area: box4;
-}
-.main .index__grid .box4 .box, main .index__grid .box4 .box {
+.main .box4 .box {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
-.main .index__grid .box4 .box .box__go__to, main .index__grid .box4 .box .box__go__to {
+.main .box4 .box .box__go__to {
   padding: 1rem;
+  width: 7rem;
   background: #751440;
   border-bottom: 3px solid #ffff00;
   border-radius: 1rem;
   color: white;
-  text-decoration: none;
-  max-width: 90px;
   font-weight: 600;
   margin-top: 3rem;
+  font-size: 1.2rem;
+  text-align: center;
 }
-.main .index__grid .box5, main .index__grid .box5 {
+.main .box5 {
   grid-area: box5;
 }
-.main .index__grid .box5 .index__img, main .index__grid .box5 .index__img {
+.main .box5 .index__img {
   border-radius: 1rem;
   margin-bottom: 2rem;
 }
-.main .gods__grid, main .gods__grid {
+.main .gods__grid {
   max-width: 1200px;
   justify-content: space-around;
 }
-.main .gods__grid .god__profile, main .gods__grid .god__profile {
+.main .gods__grid .god__profile {
   border-radius: 1rem;
   margin-bottom: 1.25rem;
   cursor: pointer;
 }
-.main .gods__grid .god__card, main .gods__grid .god__card {
+.main .gods__grid .god__card {
   border-radius: 1rem;
 }
-.main .gods__grid .head__title, main .gods__grid .head__title {
+.main .gods__grid .head__title {
   font-weight: 700;
   font-size: 1.5rem;
   text-transform: uppercase;
 }
-.main .gods__grid .close__button, main .gods__grid .close__button {
+.main .gods__grid .close__button {
   background-color: #ffff00;
   border: 1px solid #ffff00;
   color: black;
   font-weight: 600;
 }
-.main .row, main .row {
+.main .row {
   max-width: 1200px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  gap: 1rem;
 }
-.main .row .column, main .row .column {
+.main .row .column {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-.main .row .column .cover, main .row .column .cover {
+.main .row .column .cover {
   width: 212px;
   height: 300px;
   border-radius: 1rem;
   margin-bottom: 2em;
 }
-.main .row .column1, main .row .column1 {
-  grid-column: 1/2;
-}
-.main .row .column2, main .row .column2 {
-  grid-column: 2/3;
-}
-.main .row .column3, main .row .column3 {
-  grid-column: 3/4;
-}
 
 .main__container {
   max-width: 1200px;
-  box-sizing: border-box;
   margin: 0 auto;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -435,7 +409,36 @@ footer .footer__logo {
   margin-bottom: 1.25rem;
 }
 
+@media screen and (max-width: 1000px) {
+  .main__title__two {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+  }
+  .box__go__to {
+    margin: 0 0 4rem 0;
+  }
+  .main__container {
+    display: flex;
+    flex-direction: column;
+  }
+  .main__title {
+    font-size: 2.5rem;
+  }
+  .main__contacts {
+    display: flex;
+    flex-direction: row;
+  }
+  .page__title {
+    font-size: 2.5rem;
+  }
+}
 @media screen and (max-width: 880px) {
+  .main__title__two {
+    margin-bottom: 1rem;
+  }
+  .box__go__to {
+    margin: 0 0 4rem 0;
+  }
   .main__container {
     display: flex;
     flex-direction: column;
@@ -452,6 +455,12 @@ footer .footer__logo {
   }
 }
 @media screen and (max-width: 770px) {
+  .main__title__two {
+    margin-bottom: 1rem;
+  }
+  .box__go__to {
+    margin: 0 0 4rem 0;
+  }
   .main__container {
     display: flex;
     flex-direction: column;
@@ -478,6 +487,12 @@ footer .footer__logo {
   }
 }
 @media screen and (max-width: 480px) {
+  .main__title__two {
+    margin-bottom: 1rem;
+  }
+  .box__go__to {
+    margin: 0 0 4rem 0;
+  }
   .main__container {
     display: flex;
     flex-direction: column;
@@ -486,9 +501,25 @@ footer .footer__logo {
   .main__container .main__title {
     font-size: 2.5rem;
   }
-  .main__container .row {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
+  .main__container .main__contacts {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 320px) {
+  .main__title__two {
+    margin-bottom: 1rem;
+  }
+  .box__go__to {
+    margin: 0 0 4rem 0;
+  }
+  .main__container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .main__container .main__title {
+    font-size: 2rem;
   }
   .main__container .main__contacts {
     display: flex;
