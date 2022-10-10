@@ -1,4 +1,40 @@
+@media screen and (max-width:1000px) {
+
+    .main__title__two {
+        font-size: 1.5rem;
+        margin-bottom: 0;
+    }
+    .box__go__to {
+        margin: 0 0 4rem 0;
+    }
+
+    .main__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main__title {
+        font-size: 2.5rem;
+    }
+    
+    .main__contacts {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .page__title {
+        font-size: 2.5rem;
+    }
+}
+
 @media screen and (max-width:880px) {
+
+    .main__title__two {
+        margin-bottom: 1rem;
+    }
+    .box__go__to {
+        margin: 0 0 4rem 0;
+    }
 
     .main__container {
         display: flex;
@@ -20,6 +56,14 @@
 }
 
 @media screen and (max-width:770px) {
+
+    .main__title__two {
+        margin-bottom: 1rem;
+    }
+    .box__go__to {
+        margin: 0 0 4rem 0;
+    }
+
 
     .main__container {
         display: flex;
@@ -55,6 +99,13 @@
 
 @media screen and (max-width:480px) {
 
+    .main__title__two {
+        margin-bottom: 1rem;
+    }
+    .box__go__to {
+        margin: 0 0 4rem 0;
+    }
+
     .main__container {
         display: flex;
         flex-direction: column;
@@ -63,9 +114,30 @@
         .main__title {
             font-size: 2.5rem;
         }
-        .row {
-            grid-template-columns: 1fr;
-            grid-template-rows: repeat(3, 1fr);
+
+        .main__contacts {
+        display: flex;
+        flex-direction: column;
+        }
+    }
+}
+
+@media screen and (max-width:320px) {
+
+    .main__title__two {
+        margin-bottom: 1rem;
+    }
+    .box__go__to {
+        margin: 0 0 4rem 0;
+    }
+
+    .main__container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        .main__title {
+            font-size: 2rem;
         }
 
         .main__contacts {
