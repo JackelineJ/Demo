@@ -6,10 +6,6 @@
   box-sizing: border-box;
 }
 
-body {
-  position: relative;
-}
-
 ul {
   list-style-type: none;
 }
