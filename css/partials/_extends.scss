@@ -1,0 +1,26 @@
+%buttonDefault {
+    margin: 1rem 0 1rem 0;
+    width: 30%;
+    text-align: center;
+    color: map-get($colors, primary);
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+
+%flexColumn {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+%flexRow {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: center;
+}

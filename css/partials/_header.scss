@@ -1,0 +1,11 @@
+.header {
+    text-align: center;
+    background-color: map-get($colors, backgroundColor);
+    font-family: $crimson-text;
+    .header__logo {
+        width: 150px;
+        height: 150px;
+        margin-top: 23px;
+        margin-right: 23px;
+    }
+}

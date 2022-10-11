@@ -1,0 +1,106 @@
+.main {
+    font-family: $crimson-text;
+    @extend %flexColumn;
+    /*******Index*********/
+    .box2 {
+        align-items: center;
+        .main__quote::before {
+            content: "\201C";
+            left: -2.5rem;
+            margin-top: -1.25rem;
+            font-size: 4rem;
+            display: block;
+        }
+        .main__quote {
+            max-width: 700px;
+            padding: 1.625rem;
+            background: map-get($colors, backgroundQuote);
+            border: 1px solid map-get($colors, backgroundColor);
+            color: map-get($colors, backgroundColor);
+            box-sizing: border-box;
+            border-radius: 1rem;
+            margin-top: 2.5rem;
+            .main__quote__text {
+                font-style: italic;
+                text-align: justify;
+                font-size: 1.5rem;
+                font-weight: 600;
+                line-height: 1.5;
+                margin: 0;
+                color:map-get($colors, backgroundColor);
+            }
+        }
+        .main__quote__border {
+            border-left-width: 1.25rem;
+        }
+    }
+
+    .box3 {
+        align-items: center;
+    }
+    .box4 {
+        .box{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            .box__go__to {
+                @include boxButton($boxBackground: #751440, $boxBorder: 3px solid #ffff00, $boxLetter: #ffff);
+            }
+        }
+    }
+    .box5 {
+        grid-area: box5;
+        
+        .index__img{
+            border-radius: 1rem;
+            margin-bottom: 2rem;
+        }
+    }
+    /********Dioses olimpicos********/
+    .gods__grid {
+        @extend %flexRow;
+        max-width: 1200px;
+        justify-content: space-around;
+        .god__profile {
+            border-radius: 1rem;
+            margin-bottom: 1.25rem;
+            cursor: pointer;
+        }
+        .god__card {
+            border-radius: 1rem;
+        }
+        .head__title {
+            font-weight: 700;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+        }
+        .close__button {
+            background-color: map-get($colors, changeColor);
+            border: 1px solid map-get($colors, changeColor);
+            color: black;
+            font-weight: 600;
+        }
+    }
+    /***********Epopeyas y poemas***********/
+    .row {
+        max-width: 1200px;
+        .column {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            .cover {
+                width: 212px;
+                height: 300px;
+                border-radius: 1rem;
+                margin-bottom: 2em;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+

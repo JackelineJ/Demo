@@ -1,0 +1,12 @@
+@mixin boxButton ($boxBackground, $boxBorder, $boxLetter) {
+    padding: 1rem;
+    width: 7rem;
+    background: $boxBackground;
+    border-bottom: $boxBorder;
+    border-radius: 1rem;
+    color: $boxLetter;
+    font-weight: 600;
+    margin-top: 3rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
