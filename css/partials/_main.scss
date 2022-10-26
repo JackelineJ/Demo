@@ -56,7 +56,17 @@
             margin-bottom: 2rem;
         }
     }
+    .box6 {
+        
+        .greeks{
+            border-radius: 1rem;
+        }
+    }
     /********Dioses olimpicos********/
+    .introduction {
+        max-width: 1200px;
+        margin: 1rem;
+    }
     .gods__grid {
         @extend %flexRow;
         max-width: 1200px;
@@ -88,6 +98,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            margin-bottom: 1rem;
             .cover {
                 width: 212px;
                 height: 300px;
